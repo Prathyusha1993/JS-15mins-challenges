@@ -111,3 +111,18 @@ const obj = {
 console.log(this); //this refers to window object
 
 console.log(obj.getGreeting('welocme to javascript'));
+
+//..
+var greeting = 'understanding of this keyword';
+
+const obj2 = {
+    greeting: 'Hello world',
+    getGreeting: (greeting) =>  {
+        var greeting = 'Hello India';
+        console.log(this);
+        return this.greeting; //here this is refrring to global object which is window object //undersatnding of this keyword will print
+        
+    }
+}
+
+console.log(obj2.getGreeting('welocme to javascript'));
